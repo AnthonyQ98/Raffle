@@ -13,6 +13,7 @@ def lottoNumber():
     lotto_winning_number_label = lotto_winning_number.find('label').text
     return flask.render_template("index.html",token=lotto_winning_number_label)
 
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
 
 print("The bonus number is " + lottoNumber())
